@@ -1,26 +1,25 @@
-package com.usebean.controller;
+package com.mybatis.controller;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.usebean.model.vo.Person;
+import com.mybatis.model.service.MybatisService;
 
 /**
- * Servlet implementation class UseBeanTestServlet
+ * Servlet implementation class BasicInsertServlet
  */
-@WebServlet("/useBeanTest")
-public class UseBeanTestServlet extends HttpServlet {
+@WebServlet("/basicInsert")
+public class BasicInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UseBeanTestServlet() {
+    public BasicInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,16 +29,7 @@ public class UseBeanTestServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//useBean태그를 활용하기 위한 객체를 만들어서 
-		//페이지 단으로 전송하기!
-		Person p=new Person("유병승",19,"남");
-		
-		request.setAttribute("person", p);
-		request.getRequestDispatcher("/views/useBeanResult.jsp")
-		.forward(request, response);
-	
-	
-	
+		int result = new MybatisService().insertBasic();
 	}
 
 	/**

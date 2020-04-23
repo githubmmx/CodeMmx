@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>useBean 활용하기</title>
+<title>useBean활용하기</title>
 </head>
 <body>
 	<h2>useBean 표준태그활용하기 - 객체 조작하기 -</h2>
@@ -31,10 +31,24 @@
 	<jsp:getProperty name="p" property="age"/>
 	<jsp:getProperty name="p" property="gender"/>
 	
-	<h2>클라이언트가 보낸 param</h2>
+	<h2>클라이언트가 보낸 param값을 useBean에 대입이 가능</h2>
+		
 	<jsp:setProperty property="name" name="p" param="name"/>
 	<jsp:setProperty property="age" name="p" param="age"/>
 	<jsp:setProperty property="gender" name="p" param="gender"/>
-	
+	<h3>전달받은 값 출력</h3>
+	<jsp:getProperty name="p" property="tag"/>
+	<jsp:getProperty name="p" property="age"/>
+	<jsp:getProperty name="p" property="gender"/>
+		
+
+
+
 </body>
 </html>
+
+
+
+
+
+

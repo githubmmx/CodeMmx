@@ -1,4 +1,3 @@
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -58,28 +57,29 @@
 	${path2 }
 	
 	<h3>객체를 한번 저장해보자</h3>
-	<c:set var="today" value="<%=new Date() %>"></c:set>
-	<c:out value="${today }"></c:out>
-	<c:set var="person" value='new Person()'></c:set>
-	<c:out value="${person.tag }"></c:out>
-	<c:out value="${requestScope.person }"></c:out>
-	<c:out value="${pageScope.person }"></c:out>
+	<c:set var="today" value="<%=new java.util.Date() %>"/>
+	<c:out value="${today }"/>
+	<c:set var="person" value='<%=new com.usebean.model.vo.Person("진승연",27,"남") %>'/>
+	<c:out value="${person.tag }"/>
+	<c:out value='${requestScope.person }'/>
+	<c:out value='${pageScope.person }'/>
 	
-	<h4>특정 scope에 저장하기</h4>
-	<c:set value="19" var="age" scope="request"></c:set>
-	<c:set value="20" var="age" scope="session"></c:set>
-	<c:set value="121" var="age" scope="application"></c:set>
-	<c:out value="${age }"></c:out>
-	<c:out value="${sessionScope.age }"></c:out>
-	<h4>트정 객체에 값 저장하기</h4>
-	<c:out value="${person }"></c:out>
-	<c:out target="${person }" property="age" value="33"></c:out>
-	<c:out value="${person }"></c:out>
+	<h4>특정scope에 저장하기</h4>
+	<c:set value="19" var="age" scope="request"/>
+	<c:set value="20" var="age" scope="session"/>
+	<c:set value="21" var="age" scope="application"/>
+	<c:out value="${age }"/>
+	<c:out value="${sessionScope.age }"/>
+	<h4>특정 객체에 값 저장하기</h4>
+	<c:out value="${person }"/><br/>
+	<c:set target="${person }" property="age" value="33"/>
+	<c:out value="${person }"/>
 	
 	<h4>등록된 변수 삭제</h4>
-	<c:remove var="age" scope="request"/>
-	<c:out value="${age }"></c:out>
-
+	<c:remove var="age"/>
+	<c:out value="${age }"/>
+	
+	
 </body>
 </html>
 

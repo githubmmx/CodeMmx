@@ -2,24 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="path" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>예외처리</title>
+<title>마이바티스 테스트!!</title>
 </head>
 <body>
-	<%
-		String[] names=null;
-	request.setAttribute("names", names);
-	%>
-	<c:catch var="e">
-	<h1>에러발생전!</h1>
-		<%=names.length %>
-		<h1>에러발생후!</h1>
-	</c:catch>
-	<h3>난 catch밖에 있는 놈!</h3>
-	<h3>${e }</h3>
-	
+	<h1>기본 마이바티스 insert문 실행하기</h1>
+	<a href="${path }/basicInsert">기본 insert문 실행</a>
 </body>
 </html>
