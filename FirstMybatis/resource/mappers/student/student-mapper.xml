@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="student">
+  	<insert id="insertStudent" parameterType="student">
+  		INSERT INTO STUDENT VALUES(SEQ_STUDENT.NEXTVAL,#{name},#{tel},#{email},#{addr},SYSDATE)
+  	</insert>
+  	<insert id="insertStudentMap" parameterType="map">
+  		INSERT INTO STUDENT VALUES(SEQ_STUDENT.NEXTVAL,
+  		#{student.name},
+  		#{student.tel},
+  		#{student.email},
+  		#{student.addr},SYSDATE)
+  	</insert>
+  	<select id="selectCount" resultType="_int">
+  		SELECT COUNT(*) FROM STUDENT
+  	</select>
+  	
+  	<select id="selectStudent" resultType="string" parameterType="_int">
+  		SELECT STUDENT_NAME FROM STUDENT WHERE STUDENT_NO = #{NO}
+  	</select>
+  	<select id="selectStudent2" resultType="student" parameterType="_int">
+  		SELECT 	STUDENT_NO AS NO,
+  				STUDENT_NAME AS NAME,
+  				STUDENT_TEL AS TEL,
+  				STUDENT_EMAIL AS EMAIL,
+  				STUDENT_ADDR AS ADDR,
+  				REG_DATE FROM STUDENT WHERE STUDENT_NO = #{NO}
+  	</select>
+</mapper>

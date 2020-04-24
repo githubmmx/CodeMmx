@@ -1,25 +1,28 @@
-package com.mybatis.controller;
+package com.firstmybatis.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mybatis.model.service.MybatisService;
+import com.firstmybatis.model.service.StudentService;
+import com.firstmybatis.model.service.StudentServiceImpl;
 
 /**
- * Servlet implementation class BasicInsertServlet
+ * Servlet implementation class SelectCountServlet
  */
-@WebServlet("/basicInsert")
-public class BasicInsertServlet extends HttpServlet {
+@WebServlet("/selectCount")
+public class SelectCountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	private StudentService service = new StudentServiceImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BasicInsertServlet() {
+    public SelectCountServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,11 +31,10 @@ public class BasicInsertServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		int result = new MybatisService().insertBasic();
-		response.setContentType("text/html;charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().append(result>0?"입력성공":"입력실패");
+		int count = service.selectCount();
+		System.out.println(count);
+		request.setAttribute("count", count);
+		request.getRequestDispatcher("/WEB-INF/views/studentView.jsp").forward(request, response);
 	}
 
 	/**
