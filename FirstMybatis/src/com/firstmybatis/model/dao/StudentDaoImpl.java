@@ -26,7 +26,7 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public Student selectStudent(SqlSession session, int no) {
+	public Map<String, String> selectStudent(SqlSession session, int no) {
 		// TODO Auto-generated method stub
 		return session.selectOne("student.selectStudent2", no);
 	}

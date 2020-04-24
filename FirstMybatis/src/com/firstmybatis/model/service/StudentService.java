@@ -13,6 +13,6 @@ public interface StudentService {
 
 	int selectCount();
 
-	Student selectStudent(int no);
+	Map<String, String> selectStudent(int no);
 
 }

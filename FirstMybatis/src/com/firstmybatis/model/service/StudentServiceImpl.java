@@ -46,9 +46,9 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student selectStudent(int no) {
+	public Map<String, String> selectStudent(int no) {
 		SqlSession session = getSession();
-		Student s = dao.selectStudent(session, no);
+		Map<String, String> s = dao.selectStudent(session, no);
 		session.close();
 		return s;
 	}

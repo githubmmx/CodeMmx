@@ -38,7 +38,7 @@
 				</tr>
 			</table>
 		</form>
-		<p>조회한 ${param.no }번 학생의 이름은 ${name }입니다.
+		<p>조회한 ${param.no }번 학생의 이름은 ${student_name }입니다.
 		<table>
 			<tr>
 				<th>번호</th>
@@ -48,11 +48,16 @@
 				<th>주소</th>
 			</tr>
 			<tr>
-				<td><c:out value="${student.no }"></c:out> </td>
-				<td><c:out value="${student.name }"></c:out> </td>
-				<td><c:out value="${student.tel }"></c:out> </td>
-				<td><c:out value="${student.email }"></c:out> </td>
-				<td><c:out value="${student.addr }"></c:out> </td>
+				<%-- <td><c:out value="${student.student_no }"></c:out> </td>
+				<td><c:out value="${student.student_name }"></c:out> </td>
+				<td><c:out value="${student.student_tel }"></c:out> </td>
+				<td><c:out value="${student.student_email }"></c:out> </td>
+				<td><c:out value="${student.student_addr }"></c:out> </td> --%>
+				<td><c:out value="${student.STUDENT_NO }"></c:out> </td>
+				<td><c:out value="${student.STUDENT_NAME }"></c:out> </td>
+				<td><c:out value="${student.STUDENT_TEL }"></c:out> </td>
+				<td><c:out value="${student.STUDENT_EMAIL }"></c:out> </td>
+				<td><c:out value="${student.STUDENT_ADDR }"></c:out> </td>
 			</tr>
 		</table>
 	</div>

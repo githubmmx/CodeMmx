@@ -14,5 +14,5 @@ public interface StudentDao {
 
 	int selectCount(SqlSession session);
 
-	Student selectStudent(SqlSession session, int no);
+	Map<String, String> selectStudent(SqlSession session, int no);
 }

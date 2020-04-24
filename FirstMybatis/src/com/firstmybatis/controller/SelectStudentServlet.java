@@ -1,6 +1,7 @@
 package com.firstmybatis.controller;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.firstmybatis.model.service.StudentService;
 import com.firstmybatis.model.service.StudentServiceImpl;
-import com.firstmybatis.model.vo.Student;
 
 /**
  * Servlet implementation class SelectStudentServlet
@@ -35,8 +35,12 @@ public class SelectStudentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		int no = Integer.parseInt(request.getParameter("no"));
 		
-		Student s = service.selectStudent(no);
+//		Student s = service.selectStudent(no);
+//		System.out.println(s);
+		// vo를 이용하지 않고 결과값 방오기 -> map이용하기!
+		Map<String,String> s = service.selectStudent(no);
 		System.out.println(s);
+		
 //		request.setAttribute("name", name);
 		request.setAttribute("student", s);
 		request.setAttribute("count", service.selectCount());

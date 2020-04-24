@@ -11,7 +11,7 @@ import java.net.Socket;
 public class Main {
 
 	public static void main(String[] args) {
-		
+		chatServer();
 	
 	
 	
@@ -21,7 +21,9 @@ public class Main {
 	public static void chatServer() {
 		try {
 			ServerSocket server = new ServerSocket(1500);
+			System.out.println("서버 접속대기중");
 			Socket client = server.accept();
+			System.out.println("클라이언트 접속완료");
 			ClientThread ct = new ClientThread(client);
 			new Thread(ct).start();
 		} catch (IOException e) {
@@ -57,6 +59,7 @@ public class Main {
 				ByteArrayOutputStream bos = new ByteArrayOutputStream();
 				byte[] buffer = new byte[1024];
 				try {
+					System.out.println("챗 서버에서 메세지 받기 대기중..");
 					while((length = is.read(buffer)) != -1) {
 						bos.write(buffer, 0, length);
 					}
