@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="student">
- 	
+ 	<insert id="insertBasic">
+ 		INSERT INTO STUDENT VALUES(SEQ_STUDENT.NEXTVAL,
+ 		'홍길동', '01012341234', 'Hong@Hong.com','제주도 감귤동',DEFAULT)
+ 	</insert>
+ 	<insert id="insertName" parameterType="string">
+ 		INSERT INTO STUDENT VALUES(SEQ_STUDENT.NEXTVAL,
+ 		#{name}, '01012341234', 'Hong@Hong.com','제주도 감귤동',DEFAULT)
+ 	</insert>
 </mapper>

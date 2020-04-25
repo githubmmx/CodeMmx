@@ -1,25 +1,29 @@
-package com.mybatis.controller;
+package com.firstmybatis.controller;
 
 import java.io.IOException;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mybatis.model.service.MybatisService;
+import com.firstmybatis.model.service.StudentService;
+import com.firstmybatis.model.service.StudentServiceImpl;
 
 /**
- * Servlet implementation class BasicInsertServlet
+ * Servlet implementation class SelectStudentServlet
  */
-@WebServlet("/basicInsert")
-public class BasicInsertServlet extends HttpServlet {
+@WebServlet("/selectStudent")
+public class SelectStudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	private StudentService service = new StudentServiceImpl();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BasicInsertServlet() {
+    public SelectStudentServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,10 +33,20 @@ public class BasicInsertServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int result = new MybatisService().insertBasic();
-		response.setContentType("text/html;charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().append(result>0?"입력성공":"입력실패");
+		int no = Integer.parseInt(request.getParameter("no"));
+		
+//		Student s = service.selectStudent(no);
+//		System.out.println(s);
+		// vo를 이용하지 않고 결과값 방오기 -> map이용하기!
+		Map<String,String> s = service.selectStudent(no);
+		System.out.println(s);
+		
+//		request.setAttribute("name", name);
+		request.setAttribute("student", s);
+		request.setAttribute("count", service.selectCount());
+		
+		request.getRequestDispatcher("/WEB-INF/views/studentView.jsp").forward(request, response);
+		
 	}
 
 	/**

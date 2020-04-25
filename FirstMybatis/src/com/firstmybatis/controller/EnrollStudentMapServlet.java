@@ -1,4 +1,4 @@
-package com.mybatis.controller;
+package com.firstmybatis.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mybatis.model.service.MybatisService;
-
 /**
- * Servlet implementation class BasicInsertServlet
+ * Servlet implementation class EnrollStudentMapServlet
  */
-@WebServlet("/basicInsert")
-public class BasicInsertServlet extends HttpServlet {
+@WebServlet("/enrollStudentMap")
+public class EnrollStudentMapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BasicInsertServlet() {
+    public EnrollStudentMapServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,10 +27,7 @@ public class BasicInsertServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int result = new MybatisService().insertBasic();
-		response.setContentType("text/html;charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().append(result>0?"입력성공":"입력실패");
+		request.getRequestDispatcher("/WEB-INF/views/enrollMap.jsp").forward(request, response);
 	}
 
 	/**

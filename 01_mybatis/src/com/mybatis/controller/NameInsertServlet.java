@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.mybatis.model.service.MybatisService;
 
 /**
- * Servlet implementation class BasicInsertServlet
+ * Servlet implementation class NameInsertServlet
  */
-@WebServlet("/basicInsert")
-public class BasicInsertServlet extends HttpServlet {
+@WebServlet("/nameInsert")
+public class NameInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BasicInsertServlet() {
+    public NameInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,10 +29,13 @@ public class BasicInsertServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int result = new MybatisService().insertBasic();
-		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+		int result = new MybatisService().insertName(name);
+		
 		response.setCharacterEncoding("UTF-8");
-		response.getWriter().append(result>0?"입력성공":"입력실패");
+		response.setContentType("text/html;charset=UTF-8");
+		response.getWriter().append(result>0?"입력성공!":"입력실패");
 	}
 
 	/**

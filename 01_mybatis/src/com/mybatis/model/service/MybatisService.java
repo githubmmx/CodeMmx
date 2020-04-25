@@ -9,10 +9,25 @@ public class MybatisService {
 	private MybatisDao dao = new MybatisDao();
 
 	public int insertBasic() {
-		//myBatis에서는 connection -> Session
-		SqlSession session = getSession();
-		
-		return 0;
+		//mybatis에서는 connection -> Session
+		SqlSession session=getSession();
+		int result=dao.insertBasic(session);
+		//트렌젝션처리
+		if(result>0) session.commit();
+		else session.rollback();
+		session.close();
+		return result;
+	}
+
+	public int insertName(String name) {
+		// TODO Auto-generated method stub
+		SqlSession session=getSession();
+		int result=dao.insertBasic(session,name);
+		//트렌젝션처리
+		if(result>0) session.commit();
+		else session.rollback();
+		session.close();
+		return result;
 	}
 
 }

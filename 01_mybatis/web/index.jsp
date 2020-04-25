@@ -12,5 +12,10 @@
 <body>
 	<h1>기본 마이바티스 insert문 실행하기</h1>
 	<a href="${path }/basicInsert">기본 insert문 실행</a>
+	<h2>이름을 입력받아 table에 데이터 추가하기</h2>
+	<form action="${path }/nameInsert">
+		이름<input type="text" name="name">
+		<input type="submit" name="입력!">
+	</form>
 </body>
 </html>
