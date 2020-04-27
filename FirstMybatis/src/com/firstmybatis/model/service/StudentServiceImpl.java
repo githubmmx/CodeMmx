@@ -1,6 +1,7 @@
 package com.firstmybatis.model.service;
 import static com.firstmybatis.common.SqlSessionTemplate.getSession;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
@@ -42,6 +43,7 @@ public class StudentServiceImpl implements StudentService {
 	public int selectCount() {
 		SqlSession session = getSession();
 		int count = dao.selectCount(session);
+		session.close();
 		return count;
 	}
 
@@ -51,6 +53,37 @@ public class StudentServiceImpl implements StudentService {
 		Map<String, String> s = dao.selectStudent(session, no);
 		session.close();
 		return s;
+	}
+
+	@Override
+	public int deleteStudent(int no) {
+		SqlSession session = getSession();
+		int result = dao.deleteStudent(session, no);
+		if(result > 0) {
+			session.commit();
+		}else {
+			session.rollback();
+		}
+		session.close();
+		return result;
+	}
+
+	@Override
+	public List<Student> selectList() {
+		// TODO Auto-generated method stub
+		SqlSession session = getSession();
+		List<Student> list = dao.selectList(session);
+		session.close();
+		return list;
+	}
+
+	@Override
+	public List<Map<String, String>> selectMap() {
+		// TODO Auto-generated method stub
+		SqlSession session = getSession();
+		List<Map<String,String>> list = dao.selectMap(session);
+		session.close();
+		return list;
 	}
 
 }

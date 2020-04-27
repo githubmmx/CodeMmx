@@ -12,5 +12,7 @@
 <a href="${pageContext.request.contextPath }/enrollStudent">학생등록</a>
 <a href="${pageContext.request.contextPath }/enrollStudentMap">학생등록(map)</a>
 <a href="${pageContext.request.contextPath }/selectCount">학생수 조회하기</a>
+<a href="${pageContext.request.contextPath }/selectList">학생 리스트 조회</a>
+<a href="${pageContext.request.contextPath }/selectMap">학생 리스트 조회(Map)</a>
 </body>
 </html>
