@@ -15,4 +15,10 @@ public interface StudentDao {
 	int selectCount(SqlSession session);
 
 	Map<String, String> selectStudent(SqlSession session, int no);
+
+	int deleteStudent(SqlSession session, int no);
+
+	List<Student> selectList(SqlSession session);
+
+	List<Map<String, String>> selectMap(SqlSession session);
 }

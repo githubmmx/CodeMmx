@@ -38,6 +38,21 @@
 				</tr>
 			</table>
 		</form>
+		<form action="${pageContext.request.contextPath }/deleteStudent">
+			<table id="tbl-student">
+				<tr>
+					<th>학생번호</th>
+					<td>
+						<input type="number" name="no" required/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="삭제" />
+					</td>
+				</tr>
+			</table>
+		</form>
 		<p>조회한 ${param.no }번 학생의 이름은 ${student_name }입니다.
 		<table>
 			<tr>

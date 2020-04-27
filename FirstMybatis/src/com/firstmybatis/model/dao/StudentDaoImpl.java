@@ -1,5 +1,6 @@
 package com.firstmybatis.model.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
@@ -29,6 +30,24 @@ public class StudentDaoImpl implements StudentDao {
 	public Map<String, String> selectStudent(SqlSession session, int no) {
 		// TODO Auto-generated method stub
 		return session.selectOne("student.selectStudent2", no);
+	}
+
+	@Override
+	public int deleteStudent(SqlSession session, int no) {
+		// TODO Auto-generated method stub
+		return session.delete("student.deleteStudent", no);
+	}
+
+	@Override
+	public List<Student> selectList(SqlSession session) {
+		// TODO Auto-generated method stub
+		return session.selectList("student.selectList");
+	}
+
+	@Override
+	public List<Map<String, String>> selectMap(SqlSession session) {
+		// TODO Auto-generated method stub
+		return session.selectList("student.selectMap");
 	}
 
 }
