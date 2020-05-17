@@ -1,0 +1,28 @@
+@charset "utf-8";
+ 
+ /* Common */
+ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
+ body,input,textarea,select,button,table{font-family:'맑은고딕',malgun gothic,'돋움',Dotum,AppleGothic,sans- serif;font-size:12px}
+ img,fieldset,button{border:0}
+ ul,ol{list-style:none}
+ em,address{font-style:normal}
+ button,label{cursor:pointer}
+ 
+ a{text-decoration:none}
+ a:hover,a:active,a:focus{text-decoration:underline}
+ a:link { text-decoration: none; color: #6b6b6b; }
+ a:visited { text-decoration: none; color: #6b6b6b; }
+ a:hover { text-decoration: underline; color: #6b6b6b; }
+ a:active { text-decoration: none; color: #6b6b6b; }
+ 
+ /* Layout */
+ #wrap{width:100%;}
+ .cpz_inner{width:1300px; margin:0 auto; position:relative; display:block; } /* 카테고리 그룹 영역 좌측 카테고리 스크롤 위치 틀어짐으로 인한 style 추가 191115 bom :: overflow:hidden; */
+ 
+ /*  */
+ .blind{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;line-height:0;white-space:normal;word-wrap:break-word;word-break:break-all;clip:rect(0,0,0,0)}
+ .blind:before{display:block;width:0;height:0;font-size:0;content:'\00a0'}
+ caption.blind{position:static;margin:-1px 0 0;*height:0}
+ caption.blind:before{display:none}
+ caption .blind{position:static}
+ caption .blind:before{display:none}

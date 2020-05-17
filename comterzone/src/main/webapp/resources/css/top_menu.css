@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* cpz_gnb */
+.cpz_gnb {width:100%; height:32px; box-sizing:border-box; margin:0 auto; position:relative; z-index:99; border-bottom:1px solid #eee}
+.cpz_gnb_list{width:1300px;height:32px; font-family:'맑은고딕',malgun gothic,'돋움',Dotum,AppleGothic,sans- serif; margin:0 auto; position:relative; }
+.cpz_gnb_list>.left {float:left; border-left:1px solid #eee;}
+.cpz_gnb_list>.left .gateway li {font-size:13px; font-family:Noto-R; float:left; display:inline-block; width:70px; height:32px; line-height:32px; border:1px solid #eee; border-bottom:none; border-left:none; text-align:center;}
+.cpz_gnb_list>.left .gateway li.compuzone {background-color:#fff; color:#135ebb;}
+.cpz_gnb_list>.left .gateway li.cozmall>a:hover { color:#f24638 !important;}
+.cpz_gnb_list>.left .gateway li>a {width:100%; height:100%; display:inline-block; }
+.cpz_gnb_list>.left .gateway li>a:hover {text-decoration:none; font-family:Noto-M; border-color:#eee;}
+
+/* 나의 담당자 추가 2020.02.05 -SHW- */
+.cpz_gnb_list>.right { float:right; height:33px;}
+.cpz_gnb_list>.right > ul{height:100%; line-height:33px;}
+
+.cpz_gnb_list>.right>ul>li{float:left;position:relative;}
+.cpz_gnb_list>.right>ul>li:first-child:before{display:none;}
+.cpz_gnb_list>.right>ul>li:before{content:'';height:10px;display:inline-block;vertical-align:baseline;border-left:#e1e3e3 1px solid;margin:0 10px;}
+.cpz_gnb_list>.right>ul>li>a{display:inline-block;letter-spacing:-.5px; font-family:Noto-R; color:#666; font-size:12px;}
+.cpz_gnb_list>.right>ul>li>a:hover {color:#000; text-decoration:none; font-family:Noto-M;}
+.cpz_gnb_list>ul{margin:8px 0;float:right;}
+.cpz_gnb_list>ul>li{float:left;position:relative;}
+.cpz_gnb_list>ul>li:first-child:before{display:none;}
+.cpz_gnb_list>ul>li:before{content:'';height:10px;display:inline-block;vertical-align:baseline;border-left:#e1e3e3 1px solid;margin:0 10px;}
+*:first-child+html .cpz_gnb_list>ul>li.ie-before:first-child{vertical-align:baseline;border-left:#fff 1px solid;}
+*:first-child+html .cpz_gnb_list>ul>li.ie-before{height:16px;vertical-align:baseline;border-left:#e1e3e3 1px solid;padding:0 10px;}
+.cpz_gnb_list ul li a{display:block;letter-spacing:-.5px; font-family:Noto-R; color:#666; position:relative;}
+.cpz_gnb_list ul li a:hover {color:#000; text-decoration:none; font-family:Noto-M;}
+.cpz_gnb_list .down_arrow{width:7px;height:7px;background:url('../image/function_icon.png') -27px -94px; display:inline-block; vertical-align:middle; margin:0 0 0 5px}
+.cpz_gnb_list .right ul li { position:relative;}
+.cpz_gnb_list .right ul li .mapage_menu { display:none;}
+/* 딜러플래티늄 20200211 -SHW- */
+.cpz_gnb_list .right ul li:first-child > span{padding:0 2px 0 2px !important; line-height:1.8 !important; margin-top:7px !important;}
+
+/* 메뉴 hover 효과 top 위치 2020.02.05 -SHW- */
+.cpz_gnb_list .right ul li:hover .mapage_menu {display:block; position:absolute; top:30px; left:11px; width:91px; border:1px solid #afafaf; box-shadow:2px 4px 10px 0px rgba(0,0,0,0.05); background-color:#fff; z-index:99;}
+.cpz_gnb_list .right ul li:hover .mapage_menu ul { margin:0px !important; }
+.cpz_gnb_list .right ul li:hover .mapage_menu li { display:block; width:100%; height:24px; line-height:24px; display:inline-block; font-size:12px; letter-spacing:-1px; box-sizing:border-box; padding-left:10px;}
+.cpz_gnb_list .right ul li:hover .mapage_menu li:first-child {padding-top:4px;}
+.cpz_gnb_list .right ul li:hover .mapage_menu li:last-child {padding-bottom:4px ;}
+.cpz_gnb_list .right ul li:hover .mapage_menu li:hover {color:#333; }
+.cpz_gnb_list .right ul li:hover .mapage_menu li:hover a {color:#666;}
+.cpz_gnb_list .right ul li:hover .mapage_menu li:hover + .cpz_gnb_list .right ul li:hover {display:block;}
+.cpz_gnb_list .right ul .directcall>a{color:#ef5b3f; font-weight:bold;}
+.cpz_gnb_list .right ul .directcall>a:hover { color:#ef5b3f !important;}
+
+/* 메뉴 hover 효과 top 위치 2020.02.05 -SHW- */
+.cpz_gnb_list .right ul .directcall>a>.directcall_icon{width:14px; height:14px; display:inline-block; 
+background:url(//image5.compuzone.co.kr/img/images/main/mi_co.png?v=20170116) -531px -24px; margin-right:4px; vertical-align:middle;}
+
+.cpz_gnb_list .right ul .directcall .directpop{ display:none;}
+
+/* 메뉴 hover 효과 top 위치 2020.02.05 -SHW- */
+.cpz_gnb_list .right ul .directcall:hover .directpop{display:block; top:30px; position:absolute; 
+border:#d7d7d7 1px solid;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.08); background:#fff;padding:20px; z-index:100; text-align: center; left: -192px;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .deco{width:16px;height:11px;display:inline-block;background:url(//image5.compuzone.co.kr/img/images/main/mi_co.png) -534px 0px;position:absolute; top:-11px; right:18px;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call{height:100%;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call>p{ width:250px; letter-spacing:-1px;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call .txt>i{ font-style:normal; color:#eb5b40; text-decoration:underline; font-weight:bold;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call .time_info {background:#e8e8e8; padding:15px 0; line-height:15px; margin-top:15px;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call>p>span{color:#ed5b3e; font-weight:bold;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call>a{ margin-top:13px; font-family:Noto-R; font-size:14px; background:#eb5b40; color:#fff; cursor:pointer; border-radius:3px; -webkit-border-radius:3px;padding:10px 0px; display:inline-block; width:250px; letter-spacing:-1px;}
+.cpz_gnb_list .right ul .directcall:hover .directpop .call>a:hover{background-color:#e04427; text-decoration:none;}
+
+/* 나의 담당자 추가 2020.02.05 -SHW- */ /*div 크기, msg 폰트 사이즈 수정 20200212 -SHW- */
+.cpz_gnb_list .right .managerpop{display:none;}
+.cpz_gnb_list .right ul li:hover .managerpop{text-align:left; display:block; position:absolute; z-index:100; top:30px; right:0; padding:20px 20px 0; width:340px;/*  height:350px; */ box-sizing:border-box; border:#d7d7d7 1px solid; background:#fff; font-family:Noto-R; }
+.cpz_gnb_list .right .managerpop:before{content:""; position:absolute; left:0; top:250px; width:100%; height:1px; background:#ddd;}
+.cpz_gnb_list .right .mymanager{display:block; height:202px;}
+.cpz_gnb_list .right .mymanager .msg span{position:relative; font-size:13px;}
+.cpz_gnb_list .right .mymanager .msg span:before{content:""; position:absolute; left:0; bottom:1px; display:inline-block; width:100%; height:2px; background-color:#fff43d; opacity:.8;}
+.mymanager .name{margin-top:30px; font-size:19px; font-weight:bold; line-height:1;}
+.mymanager .photo{display:block; position:absolute; right:20px; top:20px;  width:80px; height:96px;}
+.mymanager .photo img{display:block; max-width:100%; max-height:100%;}
+.mymanager .cateList{margin-top:12px; width:213px; max-height:42px; text-align:left; position:absolute; top:70px; left:20px; }
+.mymanager .cateList ul{overflow:hidden;}
+.mymanager .cateList ul li{float:left; font-size:13px; display:inline-block; padding:0 6px; height:16px; line-height:16px; font-size:12px; color:#666;  border:1px solid #999; margin:0 2px 3px 0; border-radius:9px;}
+.mymanager .cateList ul li.cho{border-color:#5e80c3; color:#5e80c3;}
+.mymanager .csinfo{margin-top:80px; width:100%; padding:15px 20px; background:#f5f5f7; box-sizing:border-box; height:85px;}
+.mymanager .csinfo dl{min-width:155px; font-size:13px; line-height:1.3; color:#000;}
+.mymanager .csinfo dl dt{display:inline-block; margin-right:10px; letter-spacing:-0.5px;}
+.mymanager .csinfo dl dd{display:inline-block;}
+.cpz_gnb_list .right .managerpop .manager_btn{padding:20px 0; text-align:center;}
+.cpz_gnb_list .right .managerpop .manager_btn a{display:inline-block; width:147px; height:40px; font-size:14px; color:#fff; line-height:40px; border-radius:3px;}
+.cpz_gnb_list .right .managerpop .manager_btn a:nth-of-type(1){background-color:#666; }
+.cpz_gnb_list .right .managerpop .manager_btn a:nth-of-type(2){background-color:#2367d7; }
+.cpz_gnb_list .right .managerpop .manager_btn > p{margin-top:10px; font-size:14px; color:#5e80c3; line-height:1;}
+.cpz_gnb_list .right .managerpop .deco{width:16px;height:11px;display:inline-block;background:url(//image5.compuzone.co.kr/img/images/main/mi_co.png) -534px 0px;position:absolute; top:-11px; right:18px;}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.comterzone.shop.demo.model.vo.Demo" alias="demo"/>
+		<typeAlias type="com.comterzone.shop.common.StringArrayType" alias="strArr"/>
+		<typeAlias type="com.comterzone.shop.member.model.vo.Member" alias="member"/>
+		<typeAlias type="com.comterzone.shop.board.model.vo.Board" alias="board"/>
+		<typeAlias type="com.comterzone.shop.board.model.vo.Attachment" alias="attachment"/>
+	</typeAliases>
+</configuration>
