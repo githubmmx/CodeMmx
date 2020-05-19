@@ -1,0 +1,55 @@
+@charset "utf-8";
+.sta { width:100%; height:100px; box-sizing:border-box; position:relative;}
+.sta .cpz_logo {width:158px; height:100px; position:absolute; left:0; top:0px; z-index:9;}
+.sta .cpz_logo a { display:block; width:158px; height:100px;}
+.sta .cpz_logo h1 {width:158px; height:100px; display:inline-block; background:url('../images/logo.png') -19px 21px no-repeat; text-indent:-10000px; }
+
+/* search */
+.search_wrap {height:100px; display:inline-block; position:absolute; left:136px; top:0px;}
+.search_wrap .search_area {height:100px; position:relative;  box-sizing:border-box;}
+.search_wrap .search_area .sch_txet { border:none; border-bottom:2px solid #135dba; background-color:#fff; width:406px; box-sizing:border-box; height:33px; line-height:35px; font-size:14px; font-family:noto-D; color:#666; letter-spacing:-1px; text-align:left; padding:0 13px; margin:33px 0 0 22px;  outline:none;}
+.search_wrap .search_area .sch_txet::-ms-clear { display: none;}
+.search_wrap .search_area .sch_txet:focus {outline:none;}
+.search_wrap .search_area .sch_btn {text-indent:-10000px; width:40px; height:40px; display:block; background:url('../images/function_icon.png') no-repeat -140px -9px; position:absolute; left:387px; top:23px;}
+
+/* search-펼침 */
+.search_wrap .search_dropbox { position:absolute; width:406px; display:block; background:#fff; top:66px; left:22px; z-index:100; box-sizing:border-box; font-family:spoqa R; border:1px solid #f9f9f9; box-shadow:0px 10px 14px rgba(0, 0, 0, 0.2)}
+.search_wrap .search_dropbox>ul { padding:15px 0px; box-sizing:border-box;}
+.search_wrap .search_dropbox>ul>li {list-style:none; width:100%; position:relative; height:28px; text-align:left;  box-sizing:border-box; padding:0 20px; cursor:pointer;}
+.search_wrap .search_dropbox>ul>li:hover {background:#f7f8f9;}
+.search_wrap .search_dropbox>ul>li>a {font-size:13px; line-height:28px; font-family:spoqa M; width:100%; display:block;}
+.search_wrap .search_dropbox>ul>li>a:hover {color:#000; text-decoration:none; }
+.search_wrap .search_dropbox>ul>li>.del_btn {width:11px; height:11px; display:block; text-indent:-10000px; background:url('../images/function_icon.png') no-repeat -571px -31px; position:absolute; top:10px; right:20px;}
+.search_wrap .search_dropbox .listnone{width:404px; height:290px; float:left; padding:5px 0; text-align:center; line-height:280px;color:#888888; font-size:15px;letter-spacing:-1px;}
+.search_wrap .search_bottom {background-color:#f5f5f5; padding:15px 0; width:100%; text-align:left; display:inline-block;}
+.search_wrap .search_bottom .left {display:inline-block; text-align:left; margin-left:25px;}
+.search_wrap .search_bottom a {font-size:13px; letter-spacing:-1px; color:#000; text-decoration:none; font-family:noto-R;}
+.search_wrap .search_bottom a:hover { text-decoration:underline;}
+.search_wrap .search_bottom .right {float:right; margin-right:25px;}
+.search_wrap .search_bottom .data {display:none;}
+
+
+
+/* recommend_wrap - 잉크토너아이콘+추천검색어 */
+.recommend_wrap{ position:absolute; top:38px; left:584px;}
+.recommend_wrap .ink_cable_iconbox { float:left;}
+.recommend_wrap .ink_cable_iconbox .cable_icon{width:17px; height:17px; float:left; background:url('//image5.compuzone.co.kr/img/images/main2019/icon/category_icon_0.png') no-repeat -10px -5px; position:relative; margin-right:10px;}
+.recommend_wrap .ink_cable_iconbox .ink_icon{width:22px; height:22px; float:left; background:url('//image5.compuzone.co.kr/img/images/main2019/icon/category_icon_0.png') no-repeat -38px -5px; position:relative; }
+.recommend_wrap .recommend_list { float:left; display:block; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical; word-wrap:break-word; white-space:nowrap; position:relative; height:20px; line-height:22px; }
+.recommend_wrap .recommend_list ul li { float:left; display:inline-block; }
+.recommend_wrap .recommend_list ul li a{ display:inline-block; color:#b1b1b1; letter-spacing:-0.5px; font-family:'돋움',Dotum; font-size:11px;}
+.recommend_wrap .recommend_list ul li:before{content:'';height:9px;display:inline-block;vertical-align:baseline;border-left:#ddd 1px solid;margin:0 10px;}
+
+
+
+
+/* sta_rolling_banner 최상단우측배너 */
+.sta_rolling_banner {position:absolute; right:0; top:0px; display:block; width:277px; height:100px;}
+.sta_rolling_banner .imglink { display:block; width:100%; height:100%;}
+.sta_rolling_banner .imglink>img{ width:277px; height:100px;}
+.sta_rolling_banner .bnr_paging {position:absolute; bottom:20px; right:0px; z-index:11;}
+
+/* Button */
+/* 작은 배너 롤링 버튼*/
+.small_rolling_prev {text-indent:-10000px; width:13px; height:13px; display:block; float:left; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') no-repeat -202px -87px;}
+.small_rolling_next {text-indent:-10000px; width:13px; height:13px; display:block; float:left; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') no-repeat -217px -87px;margin-left:2px;}

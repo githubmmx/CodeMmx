@@ -13,6 +13,7 @@
         class="btn btn-outline-success"
         onclick="location.replace('${path}/board/boardForm.do');">
         
+        
         <table id="tbl-board" class="table table-striped table-hover">
             <tr>
                 <th>번호</th>

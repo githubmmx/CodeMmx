@@ -26,7 +26,7 @@
 *:first-child+html .cpz_gnb_list>ul>li.ie-before{height:16px;vertical-align:baseline;border-left:#e1e3e3 1px solid;padding:0 10px;}
 .cpz_gnb_list ul li a{display:block;letter-spacing:-.5px; font-family:Noto-R; color:#666; position:relative;}
 .cpz_gnb_list ul li a:hover {color:#000; text-decoration:none; font-family:Noto-M;}
-.cpz_gnb_list .down_arrow{width:7px;height:7px;background:url('../image/function_icon.png') -27px -94px; display:inline-block; vertical-align:middle; margin:0 0 0 5px}
+.cpz_gnb_list .down_arrow{width:7px;height:7px;background:url('../images/function_icon.png') -27px -94px; display:inline-block; vertical-align:middle; margin:0 0 0 5px}
 .cpz_gnb_list .right ul li { position:relative;}
 .cpz_gnb_list .right ul li .mapage_menu { display:none;}
 /* 딜러플래티늄 20200211 -SHW- */

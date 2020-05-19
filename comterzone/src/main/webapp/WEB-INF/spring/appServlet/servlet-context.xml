@@ -34,10 +34,11 @@
 		<!-- ================================================================== -->
 		<interceptor>
 			<!-- <mapping path="/demo/*"/> -->
-			<mapping path="/**"/>
+			<mapping path="/dddddddd"/>
 			<exclude-mapping path="/**/*.js"/>
 			<exclude-mapping path="/test/*"/>
 			<exclude-mapping path="/member/*"/>
+			<exclude-mapping path="/**"/>
 			<exclude-mapping path="/**/*.png"/>
 			<exclude-mapping path="/**/*.css"/>
 			<beans:bean class="com.comterzone.shop.common.interceptor.LoginCheckInterceptor"/>

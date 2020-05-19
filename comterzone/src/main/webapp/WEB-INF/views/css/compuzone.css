@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+/* cpz_lnb_wrap
+cpz_inner
+cpz_cate_all
+cpz_category_layer
+lnb_menu_box
+add_arrow
+lnb_dropbox
+dropbox_list
+menuCtgrLayer */
+
+        
+
+
+
+
+
+
+
+
+
+/* 나의 상담자 dimmed  popup  2020.02.05 -SHW- */
+.dimmed{display:inline-block; width:100%; height:100%;position:fixed; top:0; left:0; z-index:200; background-color:#000; opacity:.6;}
+.manager_popup_layer {position:absolute !important; top:100px; left:50%; margin-left:-425px; text-align:center; width:850px; height:780px; 
+background:#fff; opacity:1; box-sizing:border-box; z-index:10000;}
+/* 레이어팝업 보일때 바닥스크롤 막기 .on 20200211 -SHW- */
+.manager_popup_layer.on body{overflow-y:hidden;}
+/* 상단 title 삭제되고 닫기버튼 height 높임 20200213-SHW- */
+.layer_clost{display:block; width:100%; height:80px; position:relative; }
+.layer_clost_btn{display:block; position:absolute; top:25px; right:25px; z-index:1; width:20px; height:20px; background:url("http://image5.compuzone.co.kr/img/images/cscenter2019/close_btn.png") center top no-repeat;}
+.manger_layer_inner{text-align:left; padding:0 30px 0 40px; width:830px; height:675px; overflow-x:hidden; box-sizing:border-box;}
+.manger_layer_inner .mymanager_wrap{font-family:noto-M; overflow:hidden;}
+.manger_layer_inner .mymanager_wrap .manager_tit{text-align:left; height:35px; line-height:1; border-bottom:1px solid #000; font-weight:normal; font-size:20px; color:#000;}
+.manger_layer_inner .mymanager_wrap > p{text-align:left; margin-top:20px; font-size:14px; color:#5e80c3;}
+.manger_layer_inner .mymanager_wrap > p span{font-weight:bold;}
+.manger_layer_inner .mymanager_wrap .mymanager
+{margin-top:10px; padding:20px; text-align:left; position:relative; width:340px; height:208px; border:1px solid #e9ebef; background-color:#fff; box-sizing:border-box;}
+/*width값 고정 20200212-SHW- */
+.manager_popup_layer .stfpf{width:366px !important; height:235px; margin:10px 5px 0 0;}
+.manager_popup_layer .stfpf.stfpf > .name h2{font-size:20px;  color:#272727; font-weight:normal;}
+/* 휴무일 경우 20200212-SHW- */
+.closetag{width:33px;  height:19px; line-height:19px; font-family :noto-R;color:#4a4a4c; display: inline-block; text-align: center;   background-color: #f5f5f7; border: 1px solid #c4c4c4; font-size:13px;position: relative;
+ top: -3px;}	
+
+.manager_popup_layer .stfpf > .csinfo{width:100%; height:85px; box-sizing:border-box;}
+.manager_popup_layer .stfpf > .csinfo > dl{display:block; }
+.stfpf {display:inline-block; margin:5px; width:390px; height:208px; border:1px solid #e9ebef; position:relative; float:left; background-color:#fff;}
+.stfpf > .name {margin-top:44px; font-size:20px; font-family:Noto-M; display:block; line-height:20px; height:20px; text-align:left;  margin-left:20px; letter-spacing:-1.5px;}
+.stfpf > .name .offTxt {display:none; }
+.stfpf > .name input.stf_rdo[type="radio"] {display:none; vertical-align:middle; .width:25px; .height:25px; .vertical-align:-5px; }
+.stfpf > .name input.stf_rdo[type="radio"] + label.stf_rdo {vertical-align:middle; line-height:20px; .line-height:25px;}
+.stfpf > .name input.stf_rdo[type="radio"] + label.stf_rdo > i {display:inline-block; width:20px; height:20px; background:url('//image5.compuzone.co.kr/img/images/mypage/staff_radioBtn_img.png') 0 0 no-repeat; cursor:pointer; vertical-align:middle; margin:3px 5px 5px 0; .display:none !important;}
+.stfpf > .name input.stf_rdo[type="radio"]:checked + label.stf_rdo > i { background:url('//image5.compuzone.co.kr/img/images/mypage/staff_radioBtn_img.png') 0 -25px no-repeat; }
+.stfpf > .name input.stf_rdo[type="radio"] + label.stf_rdo > span { display:inline-block; font-size:14px; color:#2865bb; margin-left:3px;}
+/* ie8 */@media \0screen {		
+.stfpf > .name input.stf_rdo[type="radio"] {display:inline-block; width:20px; height:20px; vertical-align:-5px;}
+.stfpf > .name input.stf_rdo[type="radio"] + label.stf_rdo > i {display:none !important;}
+}
+.stfpf > .photo {position:absolute; top:20px; right:20px;}
+.stfpf > .photo > img, .stfpf2 > .photo > img {width:80px; height:96px;}
+.stfpf > .cateList {width:215px; max-height:42px; position:absolute; top:80px; left:20px; display:inline-block; text-align:left;}
+.stfpf > .cateList > ul > li {border-radius:9px; height:16px; line-height:16px; font-size:13px; font-family:Noto-R; color:#666; border:1px solid #999; display:inline-block; padding:0 6px; margin-right:3px; float:left; margin-bottom:3px;}
+.stfpf > .cateList > ul > li.cho {color:#2865bb; border-color:#5e80c3;}
+.msg {display:block; font-size:13px; color:#111; border-bottom:3px solid #fff43d; height:11px; line-height:13px; font-family:Noto-R; position:absolute; z-index:10; letter-spacing:-0.5px; top:23px; left:20px;}
+.stfpf > .csinfo {width:auto; height:44px; position:absolute; left:0; bottom:0; display:inline-block; background-color:#f5f5f7; padding:15px 20px; text-align:left;}
+.stfpf > .csinfo > dl {min-width:155px; font-size:13px; font-family:Noto-R; height:20px; line-height:20px}
+.stfpf > .csinfo > dl > dt {color:#000; display:inline-block; margin-right:10px; letter-spacing:-0.5px;}
+.stfpf > .csinfo > dl > dd {display:inline-block; }
+.stfpf > .csinfo.dl_only > dl {margin-top:12px;}
+.stfpf > .selectBtn {display:none; }
+
+
+.manger_layer_inner .manager_select_wrap {font-family:noto-M; text-align:left;}
+.manger_layer_inner .manager_select_wrap .manager_select_tit{ margin:40px 0 0 0; height:35px; line-height:1; border-bottom:1px solid #000; font-weight:normal; font-size:20px; color:#000;}
+.manger_layer_inner .manager_select_wrap .stf_tit { font-size:20px; margin-top:20px; font-weight:normal;}
+
+.stf_tabMenu {width:743px; display:inline-block; margin-top:30px;}
+.stf_tabMenu ul {font-size:0;}
+.stf_tabMenu li.stf_li {width:33%; height:50px; display:inline-block; font-size:16px; color:#666;}
+.stf_tabMenu li.stf_li a {width:100%; border:1px solid #ddd; border-left:none; height:48px; line-height:48px; display:inline-block; text-align:center; font-family:Noto-R;}
+.stf_tabMenu li.stf_li a:hover {text-decoration:none;}
+.stf_tabMenu li.stf_li:first-child a {border-left:1px solid #ddd;}
+.stf_tabMenu li.stf_li a.active {border:1px solid #000; color:#000; font-family:Noto-M; z-index:1;}
+.stf_list {display:inline-block; padding-bottom:30px; margin:20px 0 30px; border-bottom:1px solid #ddd; width:746px; }
+
+
+
+
+
+
+.sta { width:100%; height:100px; box-sizing:border-box; position:relative;}
+.sta .cpz_logo {width:158px; height:100px; position:absolute; left:0; top:0px; z-index:9;}
+.sta .cpz_logo a { display:block; width:158px; height:100px;}
+.sta .cpz_logo h1 {width:158px; height:100px; display:inline-block; background:url('//image5.compuzone.co.kr/img/images/main2019/logo.png') -19px 21px no-repeat; text-indent:-10000px; }
+
+/* search */
+.search_wrap {height:100px; display:inline-block; position:absolute; left:136px; top:0px;}
+.search_wrap .search_area {height:100px; position:relative;  box-sizing:border-box;}
+.search_wrap .search_area .sch_txet { border:none; border-bottom:2px solid #135dba; background-color:#fff; width:406px; box-sizing:border-box; height:33px; line-height:35px; font-size:14px; font-family:noto-D; color:#666; letter-spacing:-1px; text-align:left; padding:0 13px; margin:33px 0 0 22px;  outline:none;}
+.search_wrap .search_area .sch_txet::-ms-clear { display: none;}
+.search_wrap .search_area .sch_txet:focus {outline:none;}
+.search_wrap .search_area .sch_btn {text-indent:-10000px; width:40px; height:40px; display:block; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') no-repeat -140px -9px; position:absolute; left:387px; top:23px;}
+
+/* search-펼침 */
+.search_wrap .search_dropbox { position:absolute; width:406px; display:block; background:#fff; top:66px; left:22px; z-index:100; box-sizing:border-box; font-family:spoqa R; border:1px solid #f9f9f9; box-shadow:0px 10px 14px rgba(0, 0, 0, 0.2)}
+.search_wrap .search_dropbox>ul { padding:15px 0px; box-sizing:border-box;}
+.search_wrap .search_dropbox>ul>li {list-style:none; width:100%; position:relative; height:28px; text-align:left;  box-sizing:border-box; padding:0 20px; cursor:pointer;}
+.search_wrap .search_dropbox>ul>li:hover {background:#f7f8f9;}
+.search_wrap .search_dropbox>ul>li>a {font-size:13px; line-height:28px; font-family:spoqa M; width:100%; display:block;}
+.search_wrap .search_dropbox>ul>li>a:hover {color:#000; text-decoration:none; }
+.search_wrap .search_dropbox>ul>li>.del_btn {width:11px; height:11px; display:block; text-indent:-10000px; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') no-repeat -571px -31px; position:absolute; top:10px; right:20px;}
+.search_wrap .search_dropbox .listnone{width:404px; height:290px; float:left; padding:5px 0; text-align:center; line-height:280px;color:#888888; font-size:15px;letter-spacing:-1px;}
+.search_wrap .search_bottom {background-color:#f5f5f5; padding:15px 0; width:100%; text-align:left; display:inline-block;}
+.search_wrap .search_bottom .left {display:inline-block; text-align:left; margin-left:25px;}
+.search_wrap .search_bottom a {font-size:13px; letter-spacing:-1px; color:#000; text-decoration:none; font-family:noto-R;}
+.search_wrap .search_bottom a:hover { text-decoration:underline;}
+.search_wrap .search_bottom .right {float:right; margin-right:25px;}
+.search_wrap .search_bottom .data {display:none;}
+
+
+
+
+
+
+
+
+
+/* 고정lnb */
+.top_fix_head {position:fixed !important; opacity:0; z-index:-1px; left:-10000px; top:0px; width:100%; background:#fff; box-shadow:0px 6px 11px 0 rgba(0,0,0,0.2);  border-bottom:1px solid #125dba !important; border-top:1px solid #f2f2f2; font-family:noto-R; height:45px;}
+.top_fix_head.on{ opacity:1; z-index:102; left:0px;}
+.top_fix_head .top_fix_wrap {height:45px;}
+.top_fix_head .top_fix_wrap:after {clear:both; display:block; content:''}
+.top_fix_head .cpz_logo {width:129px; height:21px; position:absolute; left:0; top:15px; float:left; margin-left:65px}
+.top_fix_head .cpz_logo h1 {width:129px; height:21px; display:inline-block; background:url('//image5.compuzone.co.kr/img/images/main2019/logo.png') -203px -23px;  top no-repeat; text-indent:-10000px; }
+.top_fix_head .cpz_cate_all {position:absolute !important; left:0; top:0px; overflow:hidden; width:45px; height:45px; font-size:0; text-indent:-9999px}
+.top_fix_head .fixed_search_wrap { left:549px !important; top:1px !important; }
+.top_fix_head .fixedlnb_search_area {width:425px; height:34px; border-radius:20px; background-color:#f4f3f8; position: absolute; left:4px; margin-top:4px;}
+.top_fix_head .fixedlnb_search_area .sch_txet { border:none; background-color:#f4f3f8; width:380px; height:34px; line-height:34px; font-size:14px; margin-left:23px; font-family:noto-D; color:#666; letter-spacing:-1px; text-align:left; float:left; }
+.top_fix_head .fixedlnb_search_area .sch_txet::-ms-clear { display: none;}
+.top_fix_head .fixedlnb_search_area .sch_txet:focus {outline:none;}
+.top_fix_head .fixedlnb_search_area .sch_btn {text-indent:-10000px; width:19px; height:19px; display:block; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') no-repeat -204px -22px; position:absolute; right:16px; top:7px;}
+.top_fix_head .right_icon_area { position:relative; width:106px; box-sizing:border-box; padding:8px 0px 0 18px;}
+.top_fix_head .right_icon_area .cart_icon {width:31px; height:26px; display:block; float:left; background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -13px -66px; position:relative; cursor:pointer;}
+.top_fix_head .right_icon_area .mypage_icon {width:36px; height:26px; display:block; float:left;background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -63px -68px; position:relative; cursor:pointer; margin-left:20px;}
+.top_fix_head .right_icon_area .cart_icon .cart_num {position:absolute; top:-6px; right:-6px; text-align:center; color:#fff; font-size:10px; border-radius:10px; background-color:#f24638; padding:1px 5px;}
+.top_fix_head .right_icon_area .cart_icon>a { display: block; width:31px; height:26px; box-sizing:border-box; padding:0 !important;}
+.top_fix_head .right_icon_area .mypage_icon>a { display: block; width:36px; height:26px; box-sizing:border-box; padding:0 !important;}
+
+
+/* 좌측날개배너 */
+.leftwing_section{position:absolute;top:209px;left:50%; z-index:10; width:115px; margin-left:-785px}
+.leftwing_section .leftwing_box{position:relative;top:0;left:0;margin-left:0}
+.leftwing_box .wingrolling_area { display:block; width:115px; height:197px;}
+.leftwing_box .wingrolling_area .leftwing_paging {position:absolute; bottom:13px; left:44px; z-index:11;}
+.leftwing_box .wingrolling_bnr_wrap{overflow: hidden; position:relative;top:0;left:0; z-index:10; width:95px;}
+.leftwing_box .wingrolling_bnr_box{overflow:hidden;height:109px}
+.leftwing_box .wingrolling_cont{height:109px}
+.leftwing_box .wingrolling_cont li {display:list-item; float:left; width: 100%; height: 100%;}
+.leftwing_box .wingrolling_cont li a{display:inline-block;vertical-align:top}
+.leftwing_box .wingrolling_cont li img{vertical-align:top}
+.leftwing_box .bn_brem{ position:absolute; text-align:center}
+.leftwing_box .bn_brem .sp_rban{position:static;top:auto;left:auto;right:auto;width:18px;height:18px;margin:0 1px}
+.leftwing_box .bn_brem .prev{background-position:-10px 0}
+.leftwing_box .bn_brem .next{background-position:-30px 0}
+.leftwing_box .wingrolling_area{position:relative; box-sizing:border-box; padding:0 10px; }
+.leftwing_box .wingrolling_area .wingrolling_bnr_box,.leftwing_box .wingrolling_area .wingrolling_cont{height:197px}
+.leftwing_box .wing_fix_bnr{position:relative;}
+.leftwing_box .wing_fix_bnr:last-child{ margin-top:10px;}
+.leftwing_box .wingrolling_bnr_wrap,.leftwing_box .wing_fix_bnr{position:relative;top:0;left:0}
+
+/* 우측날개 --상담센터+최근본상품+배너 */
+.rightwing_section._fixed { position:fixed !important; top:90px !important;}
+.rightwing_section{position: absolute; top:209px; right:auto; left:50%; z-index:98; width:100px; margin-left:679px; line-height:1.5rem; text-align:center; }
+.rightwing_section .rightwing_wrap { position:relative; border:1px solid #ddd; box-sizing:border-box;}
+.rightwing_section .rightwing_wrap .rightwing_xbtn{position:absolute;top:-25px;right:0;width:21px;height:21px; border-radius:25px; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') -566px -25px no-repeat #fff; border:1px solid #ddd;}
+.rightwing_section._minisection { position:fixed; width:55px; height:119px; right:0; left:auto; top:208px; margin-left:0px; background:none; z-index:99;}
+.rightwing_section._minisection .miniwing{ width:100%; display:block; border:1px solid #989898; background:#fff;}
+.rightwing_section._minisection .mini_btn_chatbot , .rightwing_section._minisection .mini_btn_kakao {display:block; margin:0; border-bottom:1px solid #989898; box-sizing:border-box;}
+.rightwing_section._minisection .mini_btn_chatbot a ,.rightwing_section._minisection .mini_btn_kakao a { display:block; font-size:12px;  font-family:noto-b; text-align:center; letter-spacing:-1px; margin-top:7px; }
+.rightwing_section._minisection .mini_btn_chatbot a:hover ,.rightwing_section._minisection .mini_btn_kakao a:hover { text-decoration:none;}
+.rightwing_section._minisection .mini_btn_chatbot {height:46px;}
+.rightwing_section._minisection .mini_btn_chatbot a {color:#2367d7;}
+.rightwing_section._minisection .mini_btn_chatbot a:before { content:''; display:block; width:22px; height:19px; background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -201px -20px; margin:0px 15.5px; }
+.rightwing_section._minisection .mini_btn_kakao {height:60px;}
+.rightwing_section._minisection .mini_btn_kakao a { line-height:15px; color:#3b1d1f;}
+.rightwing_section._minisection .mini_btn_kakao a:before { content:''; display:block; width:23px; height:19px; background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -391px -19px; margin:0px 15.5px 4px; }
+.rightwing_section._minisection .history_btn a, .rightwing_section._minisection .wish_btn a  { display:block; background:#fafafb; font-family:noto-M; font-size:12px; line-height:16px; letter-spacing:-0.5px; text-align:left; box-sizing:border-box; padding:6px; color:#000; border-top:1px solid #ddd;}
+.rightwing_section._minisection .history_btn a:hover, .rightwing_section._minisection .wish_btn a:hover{ text-decoration:none;}
+.rightwing_section._minisection .history_btn a:before {content:''; width:9px;height:9px;background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') -54px -91px; display:inline-block; vertical-align:middle;  -ms-transform: rotate(180deg); /* IE 9 */ -webkit-transform: rotate(180deg); /* Safari prior 9.0 */ transform: rotate(180deg); /* Standard syntax */}
+.rightwing_section._minisection .miniwing_btn_top{display:block;width:55px; height:21px; background-color:#989898; box-sizing:border-box;}
+.rightwing_section._minisection .miniwing_btn_top .btn_top_icon{ display:block; height:21px; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') -328px -20px no-repeat}
+.rightwing_section._minisection .rightwing_wrap{ margin-left:-45px;}
+.rightwing_box{ position:relative; overflow:hidden; }
+.rightwing_box .counselling { position:relative; }
+.rightwing_box .counselling ul {width:200px;}
+.rightwing_box .counselling ul li { margin:0; background:#fff; height:87px; box-sizing:border-box; padding:8px 0 0; float:left; position:relative;}
+.rightwing_box .counselling ul li a {display:inline-block; width:100%; box-sizing:border-box; text-align:center; letter-spacing:-1px; font-family:noto-b; font-size:14px;}
+.rightwing_box .counselling ul li a:hover { text-decoration:none;}
+.rightwing_box .btn_chatbot a {color:#2367d7;}
+.rightwing_box .btn_chatbot a:before { content:''; display:block; width:37px; height:31px; background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -113px -11px; margin:0px 30px; }
+.rightwing_box .btn_kakao a {color:#3b1d1f; }
+.rightwing_box .btn_kakao a:before { content:''; display:block; width:37px; height:32px; background:url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -333px -11px; margin:0px 30px; }
+.rightwing_box .counselling .rightwing_paging {position:absolute; top:60px; box-sizing:border-box; padding:7px 35px;}
+.rightwing_box .history_box{overflow:hidden;position:relative; z-index:1000; height:258px; padding:7.5px 15.5px; background:#fafafb; border-top:1px solid #ddd; border-bottom:1px solid #ddd;  box-sizing:border-box;}
+.rightwing_box .history_list li.history_txt {background:#fff; margin:0}
+.rightwing_box .history_list li.history_txt p.history_txt{ width:67px;  border:1px solid #ececec; height:231px; box-sizing:border-box; text-align:center; font-size:12px; line-height:18px; color:#666; font-family:spoqa R; padding:80px 0; letter-spacing:-1px;}
+.rightwing_box .history_list{overflow:hidden;position:relative;z-index:1000;height:248px; }
+.rightwing_box .history_list li{overflow:hidden;margin-top:5.5px;}
+.rightwing_box .history_list li .history_sumimg {position:relative;}
+.rightwing_box .history_list li .history_sumimg a{display:block;position:relative;width:65px;height:65px; border:1px solid #ececec; background:#fff;}
+.rightwing_box .history_list li .history_sumimg a img { width:60px; height:60px; margin-top:5px;}
+.rightwing_box .history_box .rightwing_paging { position:absolute; bottom:0px; box-sizing:border-box; padding:9.5px 20px;}
+.rightwing_box .wish_btn{display:block; text-align:center; height:36px; background-color:#fafafb; border-bottom:1px solid #ddd; line-height:36px; box-sizing:border-box;  font-family:spoqa M; font-size:13px; color:#333; letter-spacing:-0.8px; position:relative; padding-left:12px;}
+.rightwing_box .wish_btn:hover { text-decoration:none;}
+.rightwing_box .wish_btn .wish_icon{ display:inline-block; position:absolute; top:12px; left:12px; width:15px; height:12px; background: url('//image5.compuzone.co.kr/img/images/main2019/symbol_icon.png') no-repeat -222px -76px;}
+.rightwing_bnr {position:relative; width:100%; height:147px;}
+.rightwing_bnr a img { width:98px; height:147px;}
+.rightwing_btn_top{display:block; height:36px; background-color:#989898; box-sizing:border-box; }
+.rightwing_btn_top .btn_top_icon{ display:block; height:36px; background:url('//image5.compuzone.co.kr/img/images/main2019/function_icon.png') -241px -13px no-repeat}
+
+/* 양날개배너 라인배너 생성 시 위치 값 */
+.leftwing_section.line_bnr, .rightwing_section.line_bnr { top:279px;}
+
+/* footer */
+#footer { width:100%; height:220px; border-top:#aaaaaa 2px solid; float:left; background-color: #fff;}
+#footer .footer_nav { width:100%; height:45px; float:left;}
+#footer .footer_nav .footer_nav_area { width:1300px; height:45px; margin:0 auto; position:relative; .position:static; }
+#footer .footer_nav .footer_nav_area > ul { float:left;}
+#footer .footer_nav .footer_nav_area > ul > li { height:45px; line-height:45px; list-style:none; margin-right:30px; float:left; font-family:Noto-R; font-size:13.5px; letter-spacing:-0.5px; }
+#footer .footer_nav .footer_nav_area > ul > li > a { height:36px; display:block;  color:#000000;}
+#footer .footer_nav .footer_nav_area > ul > li > a:hover { text-decoration:none; }
+#footer .cpz_copyright { width:100%; border-top:#e5e5e5 1px solid; float:left;}
+#footer .cpz_copyright .cpz_copyright_area { width:1300px; margin:0 auto;}
+#footer .cpz_copyright .cpz_copyright_area  ul { list-style:none; margin-top:28px;}
+#footer .cpz_copyright .cpz_copyright_area  .left { float:left;}
+#footer .cpz_copyright .cpz_copyright_area .left p {color:#888; font-size:12px; letter-spacing:-0.5px; line-height:23px; height:23px;}
+#footer .cpz_copyright .cpz_copyright_area .left p a:hover{ text-decoration:none;}
+#footer .cpz_copyright .cpz_copyright_area .left p strong { color:#000; font-family:noto-b; font-weight:normal;}
+#footer .cpz_copyright .cpz_copyright_area .left p  em { color:#6D6D6D; font-size:11px; font-style:normal; }
+#footer .cpz_copyright .cpz_copyright_area .left p .btn {display:inline-block; height:15px; padding:0 4px; border:1px solid #ccc; background-color:#fff; color:#999; font-size:11px; line-height:15px; margin-left:5px; } 
+#footer .cpz_copyright .cpz_copyright_area .right { float:right; max-width:470px; box-sizing:border-box;}
+#footer .cpz_copyright .cpz_copyright_area .right ul { list-style:none; margin-top:0px !important; }
+#footer .cpz_copyright .cpz_copyright_area .right ul li {display:inline-block; margin-right:18px; padding:6px 0; float:right; }
+#footer .cpz_copyright .cpz_copyright_area .right ul li a:hover { text-decoration:none;}
+#footer .cpz_copyright .cpz_copyright_area .right ul li .footer_mark{display:inline-block; background:url('//image5.compuzone.co.kr/img/images/main2019/footer_mark.jpg') no-repeat 0 0;vertical-align:top;}
+#footer .cpz_copyright .cpz_copyright_area .right ul li .mark1{width:85px; height:35px; background-position:-296px -7px}
+#footer .cpz_copyright .cpz_copyright_area .right ul li .mark2{width:119px; height:35px; background-position:-146px -7px}
+#footer .cpz_copyright .cpz_copyright_area .right ul li .mark3{width:99px; height:35px; background-position:-16px -7px }
+#footer .cpz_copyright .cpz_copyright_area .right ul li .mark4{width:140px; height:35px; background-position:-86px -56px}
+#footer .cpz_copyright .cpz_copyright_area .right ul li .mark5{width:125px; height:35px; background-position:-256px -56px;}
+
+
+
+/* 장바구니팝업 */
+.basket_layerpop { position:fixed; left:50%; margin-left:-205px; top:50%; margin-top:-90px;  text-align:left; box-sizing: border-box; font-family:'spoqa M'; letter-spacing:-1px; width:410px; height:180px; padding:25px; display:block; border:1px solid #b7bbc0; background:#fff;z-index:100; box-shadow:2px 4px 10px 0px rgba(0,0,0,0.1);}
+.basket_layerpop .bskpop_txt {text-align: center;font-size:16px;}
+.basket_layerpop .bskpop_txt >span{display:inline-block; margin: 20px 0 30px 0;}
+.basket_layerpop .btn_area button { width:50%; float:left; border:1px solid #ccc; padding:15px 0; font-family: 'noto-R'; font-size:15px; background-color:transparent;}
+.basket_layerpop .btn_area button.bkbg { width:50%; float:left; border:1px solid #000; background:#000; color: #fff;}
+.basket_layerpop .bskpop_close {position:absolute !important;padding:0 !important;top:20px;right:20px;width:16px;height:16px;background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -350px -130px no-repeat;}
+
+/* 추석 로고 아트 소연 190906 ~ 0915
+.search_wrap {left:153px; z-index:10;}
+.recommend_wrap {left:600px;} */
+
+
+
+/* 전 페이지 공통으로 사용되는 것은 아래에 기재해주세요! --------------------------------------------- 
+	기본 스타일은 여기에 추가하나, 세부 위치 수정이나 그외 해당 페이지에만 사용하는건 각 페이지에 해당하는 CSS 파일 또는 페이지 내에 추가사항 기재 */
+
+/* new icon */  .ico_dot_new {
+	text-decoration:none; font-style:normal; font-weight:normal; font-size:10px; width:12px; height:12px; display:inline-block; color:#fff; background-color:#ff4a4a; line-height: 10.5px; text-align:center; border-radius:50%; font-family:spoqa M; vertical-align:1px;}
+/* 이벤트 아이콘 css */
+.evtIco_obj {display:inline-block; box-sizing:border-box; height:22px; margin-right:3px; padding:0 5px; border:1px solid #86b0a5; font-size:12px; line-height:18px; margin-bottom:4px; font-family:spoqa M;}
+/* 마감임박 */.evtIco_obj.blink { animation-name:blink; animation-duration:.5s; animation-iteration-count:infinite; animation-delay:0s; color:#ff4848; border-color:#ff4848;} 
+	@keyframes blink {
+		0%, 50% {}
+		51% {border-color:#ffa518; color:#ffa518;}
+	}	
+	@-webkit-keyframes blink {
+		0%, 20% {opacity:0;} 21% {opacity:1;}
+	}
+	@-moz-keyframes blink {
+		0%, 20% {opacity:0;} 21% {opacity:1;} }
+
+/* 컴퓨존 내 코즈몰 노출 추가요청 건 :: 191224 bom */
+	.cpz_category_layer.cozM .second_cate_area {top:-25px;}
+	.cpz_category_layer .cozmall_area {margin-top:664px;}
+	.cpz_category_layer.cozM .cozmall_area {background-color:#fff; width:183px; height:95px !important; z-index:999; }
+	.cpz_category_layer.cozM .cozM_bg{position:absolute; z-index:-1; top:0; left:0; width:192px; height:679px; border-right:1px solid #ddd; border-bottom:1px solid #ddd; background:url('//image5.compuzone.co.kr/img/images/main2019/coz_cate_bg_img.png') repeat;}
+	.cpz_category_layer.cozM .second_cate_area strong {}
+	.cpz_category_layer.cozM .category_set_area .s_cate_list a.active, .cpz_category_layer.cozM .category_set_area .s_cate_list a:hover {color:#222; }
+	.cpz_category_layer.cozM .category_set_area .s_cate_list .witharrow.active:after, .cpz_category_layer.cozM .category_set_area .s_cate_list .witharrow:hover:after {background-position:-79px -92px;}
+	.cpz_category_layer._on .f_cate_list li {width:183px !important; }
+
+/* 제품 상세페이지 및 아이웍스와 추천조립상품 리스트 페이지의 비교 아이콘 CSS 200312 J.sunga  */
+.compare_bt {width: 60px; height: 22px; border-radius: 50px; background: #e6e6e6; color: #999; float: right; text-align: center; cursor: pointer;}
+.compare_bt.on {background:#3775ff; color: #fff;}
+.compare_bt > p	 {display: inline-block; font-size:13px; line-height: 22px; font-family: 'spoqa M';}
+.compare_img { /* vertical-align: -2px; */ display: inline-block;	 width: 12px; height: 12px; background-image:url(//image5.compuzone.co.kr/img/images/product_detail/ProductCompare_bts.png); background-position: -12px 0;}
+.compare_bt.on .compare_img { background-position: 0 0;}
+.no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+/* //제품 상세페이지 및 아이웍스와 추천조립상품 리스트 페이지의 비교 아이콘*/
+
+/*비교하기 레이어팝업 200313 J.sunga -여러 페이지에서 동일한 스타일로 사용*/
+/* 팝업위치는 페이지마다 다르므로, .prd_compare_LyPop의 left와 top 값은 각 페이지에서 따로 주어야 함!! */
+.prd_compare_LyPop {width: 530px; max-height: 520px; position: absolute; display: inline-block; border: 1px solid #a6a6a6; background: #fff; z-index:10000; -webkit-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.05); -moz-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.05); box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.05);}
+.prd_compare_LyPop .pc_LyPop_close {position:absolute !important; padding:0 !important; top:15px; right:15px; width:16px; height:16px; background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -350px -130px no-repeat;}
+.prd_compare_LyPop .prd_compare_head { width: 100%; height: 30px; padding: 0 30px; margin-top: 57px; box-sizing:border-box;}
+.prd_compare_LyPop .prd_compare_head .pch_title {font-size:22px; color:#434343; font-family: 'noto-B';}
+.prd_compare_LyPop .prd_compare_head .pch_bt {position: relative; width: 82px; height: 28px; float: right; margin-left: 10px; cursor: pointer; font-size:14px; text-align: center; line-height: 30px; font-family: 'noto-R';}
+.prd_compare_LyPop .prd_compare_head .pch_bt.delete { background: #fff; color: #434343; border: 1px solid #434343;}
+.prd_compare_LyPop .prd_compare_head .pch_bt.winPop { background: #3775ff; color: #fff; border: 1px solid #3775ff;}
+.prd_compare_LyPop .prd_compare_head .pch_bt.winPop > .winPop_a {position: absolute; top:0; left: 0; width: 82px; height: 28px;}
+.prd_compare_LyPop .prd_compare_body {width: 100%; max-height: 418px; overflow-y: auto; margin-top: 14px; border-top: 1px solid #ddd;}
+.prd_compare_LyPop .prd_compare_body .compare_li {width: 100%; height: 158px; border-bottom: 1px solid #ddd; box-sizing:border-box; padding: 14px 26px; font-family: 'noto-R'; color: #434343; position: relative;}
+.prd_compare_LyPop .prd_compare_body .compare_li .compare_num { font-size: 13px; line-height: 22px; vertical-align: top;}
+.prd_compare_LyPop .prd_compare_body .compare_li .compare_img { width: 128px; height: 128px; border: 1px solid #ddd; margin-left: 14px;}
+.prd_compare_LyPop .prd_compare_body .compare_li .compare_img > img {width: 100%; height: 100%;}
+.compare_li .compare_name_price {display: inline-block; margin-left: 20px; width: 238px; vertical-align: top; letter-spacing: -0.5px}
+.compare_li .compare_name_price .compare_name { font-size:14px; padding-bottom: 10px; line-height: 20px; word-break: break-all;}
+.compare_li .compare_name_price .compare_price > span {padding-right: 7px;} 
+.compare_li .compare_name_price .compare_price .discount { font-size: 20px; font-weight: bold; letter-spacing: -0.5px; color: #ff4a4a;}
+.compare_li .compare_name_price .compare_price .won {font-size: 20px; font-family: 'noto-B';} 
+.compare_li .compare_name_price .compare_price .won > em {font-size: 18px;} 
+.compare_li .compare_name_price .compare_price .under {font-size: 15px; color: #6b6b6b; text-decoration: line-through;}
+.compare_li .compare_name_price .compare_price .rating {display: block; font-size: 13px; color: #6b6b6b; margin-top: 7px;}
+.compare_li .compare_name_price .compare_price .rating .Product_star { background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) #fff -8px -181px; width: 73px; height: 12px; display: inline-block; margin: 0;}
+.compare_li .compare_name_price .compare_price .rating .Product_starIco { background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) #fff -8px -166px; height: 12px; display: inline-block; margin: 0;}
+.compare_close {position:absolute; top:20px; right:20px; width:11px; height:11px; background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new_1.png) -366px -130px no-repeat; cursor: pointer;}
+/* //비교하기 레이어팝업 200313*/
