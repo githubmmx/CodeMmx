@@ -1,4 +1,4 @@
-package com.comterzone.shop.admin;
+package com.comterzone.shop.admin.controller;
 
 import java.util.Locale;
 
@@ -20,11 +20,7 @@ public class AdminController {
 		return "/admin/addProduct";
 	}
 	
-	@RequestMapping("/admin/SmartEditor2Skin.html")
-	public String smartEditorRedirect() {
-		return "redirect:/admin/SmartEditor2Skin.html";
-	}
-	
+
 	
 	
 	
