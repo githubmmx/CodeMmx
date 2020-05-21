@@ -9,7 +9,7 @@
 
 <head>
 
-    <title>Cafe24-Echosting Admin</title>
+    <title>Admin</title>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap -->
