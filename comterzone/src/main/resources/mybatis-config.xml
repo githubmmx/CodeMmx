@@ -7,5 +7,6 @@
 		<typeAlias type="com.comterzone.shop.member.model.vo.Member" alias="member"/>
 		<typeAlias type="com.comterzone.shop.board.model.vo.Board" alias="board"/>
 		<typeAlias type="com.comterzone.shop.board.model.vo.Attachment" alias="attachment"/>
+		<typeAlias type="com.comterzone.shop.product.model.vo.Category" alias="category"/>
 	</typeAliases>
 </configuration>

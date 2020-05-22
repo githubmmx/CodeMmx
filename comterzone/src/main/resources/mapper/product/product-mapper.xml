@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="product">
+	<select id="selectCategoryList" resultType="category">
+		SELECT LEVEL, NO, CATEGORY_NAME, PARENT_CATEGORY_NO FROM CATEGORY_TB
+		START WITH PARENT_CATEGORY_NO IS NULL 
+		CONNECT BY PRIOR NO=PARENT_CATEGORY_NO 
+		ORDER BY LEVEL,CATEGORY_NAME
+	</select>
+</mapper>
